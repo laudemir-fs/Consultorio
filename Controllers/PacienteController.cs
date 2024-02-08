@@ -13,38 +13,10 @@ public class PacientesController : ControllerBase
 
     // GET: api/Pacientes
     [HttpGet]
-    public IActionResult GetAllPatients()
+    public ActionResult GetAllPacientes()
     {
-        var pacientes = _pacienteService.GetAllPacientes();
-        return Ok(pacientes);
-    }
-    
-    // GET: api/Pacientes/5
-    [HttpGet("{id}")]
-    public async Task<ActionResult<Paciente>> GetPaciente(int id)
-    {
-        var paciente = await _pacienteService.GetPaciente(id);
-
-        if (paciente == null)
-        {
-            return NotFound();
-        }
-
-        return paciente;
-    }
-
-    // PUT: api/Pacientes/5
-    [HttpPut("{id}")]
-    public async Task<IActionResult> PutPaciente(int id, Paciente paciente)
-    {
-        if (id != paciente.PacienteID)
-        {
-            return BadRequest();
-        }
-
-        await _pacienteService.UpdatePaciente(paciente);
-
-        return NoContent();
+            var pacientes =  _pacienteService.ListAll();
+            return Ok(pacientes);
     }
 
     // POST: api/Pacientes
@@ -66,14 +38,6 @@ public class PacientesController : ControllerBase
             }
         }
 
-    // DELETE: api/Pacientes/5
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeletePaciente(int id)
-    {
-        await _pacienteService.DeletePaciente(id);
-
-        return NoContent();
-    }
 }
 
 

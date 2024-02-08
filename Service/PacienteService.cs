@@ -9,34 +9,14 @@ public class PacienteService : IPacienteService
         _pacienteRepository = pacienteRepository;
     }
 
-    public async Task<IEnumerable<Paciente>> GetAllPacientes()
+    public async Task<IEnumerable<Paciente>> ListAll()
     {
-        return await _pacienteRepository.GetAllPacientes();
+        return await _pacienteRepository.ListAll();
     }
 
     public async Task Inserir(Paciente paciente)
     {
         await _pacienteRepository.InserirPaciente(paciente);
-    }
-
-    public Task DeletePaciente(int id)
-    {   
-        throw new NotImplementedException();
-    }
-
-    public Task<Paciente> GetPaciente(int id)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task UpdatePaciente(Paciente paciente)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task AddPaciente(Paciente paciente)
-    {
-        throw new NotImplementedException();
     }
 
 }

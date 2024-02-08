@@ -1,6 +1,7 @@
 
 using System.Data;
 using System.Data.Common;
+using System.Data.SqlClient;
 using System.Reflection.Metadata;
 using Dapper;
 
@@ -12,21 +13,6 @@ public class PacienteRepository : IPacienteRepository
     public PacienteRepository(IDbConnection dbConnection)
     {
         _dbConnection = dbConnection;
-    }
-
-    public Task DeletePaciente(int id)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<Paciente> GetPaciente(int id)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task UpdatePaciente(Paciente paciente)
-    {
-        throw new NotImplementedException();
     }
 
     public async Task InserirPaciente(Paciente paciente)
@@ -47,8 +33,9 @@ public class PacienteRepository : IPacienteRepository
         }
     }
 
-    public async Task<IEnumerable<Paciente>> GetAllPacientes()
+    public async Task<IEnumerable<Paciente>> ListAll()
     {
-        return await _dbConnection.QueryAsync<Paciente>("[ListarPacientes]");
+        var paciente =_dbConnection.Query<Paciente>("[ListarPacientes]");
+        return paciente;
     }
 }
