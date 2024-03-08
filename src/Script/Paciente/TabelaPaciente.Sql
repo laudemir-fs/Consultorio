@@ -1,0 +1,10 @@
+-- Tabela Pacientes
+CREATE TABLE Pacientes (
+    PacienteID INT PRIMARY KEY,
+    Nome NVARCHAR(100) NOT NULL,
+    CPF NVARCHAR(11) UNIQUE NOT NULL,
+    DataNascimento DATE NOT NULL,
+    Sexo NVARCHAR(10) NOT NULL,
+    Telefone NVARCHAR(15) NOT NULL,
+    Email NVARCHAR(100) NOT NULL
+);
