@@ -9,14 +9,22 @@ public class PacienteService : IPacienteService
         _pacienteRepository = pacienteRepository;
     }
 
-    public async Task<IEnumerable<Paciente>> ListAll()
+    public async Task<IList<Paciente>> ListAll()
+{
+    var pacientes = await _pacienteRepository.ListAll();
+
+    foreach (var paciente in pacientes)
     {
-        return await _pacienteRepository.ListAll();
+        paciente.Data = paciente.DataNascimento.ToString("dd-MM-yyyy");
     }
 
-    public async Task Inserir(Paciente paciente)
+    return pacientes;
+}
+    
+        public async Task Inserir(PacienteInsert paciente)
     {
         await _pacienteRepository.InserirPaciente(paciente);
     }
 
+   
 }

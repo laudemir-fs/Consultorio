@@ -1,4 +1,4 @@
-public class Paciente
+public class PacienteInsert
 {
     public int PacienteID { get; set; }
     public string Nome { get; set; }
@@ -7,6 +7,5 @@ public class Paciente
     public string Sexo { get; set; }
     public string Telefone { get; set; }
     public string Email { get; set; }
-    public string Data { get; set; }
-    
+    //public string DataNascimentoFormatada { get; set; }
 }

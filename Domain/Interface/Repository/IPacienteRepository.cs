@@ -1,8 +1,8 @@
 public interface IPacienteRepository
 {
-    Task <IEnumerable<Paciente>> ListAll();
+    Task <IList<Paciente>> ListAll();
     //Task<Paciente> GetPaciente(int id);
-    Task InserirPaciente(Paciente paciente);
+    Task InserirPaciente(PacienteInsert paciente);
     //Task UpdatePaciente(Paciente paciente);
     //Task DeletePaciente(int id);
 }

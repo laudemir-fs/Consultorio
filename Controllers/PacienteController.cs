@@ -21,7 +21,7 @@ public class PacientesController : ControllerBase
 
     // POST: api/Pacientes
     [HttpPost]
-        public async Task<IActionResult> Inserir([FromBody] Paciente paciente)
+        public async Task<IActionResult> Inserir([FromBody] PacienteInsert paciente)
         {
             if (!ModelState.IsValid)
             {

@@ -1,8 +1,8 @@
 public interface IPacienteService
 {
-    Task<IEnumerable<Paciente>> ListAll();
+    Task<IList<Paciente>> ListAll();
     //Task<Paciente> GetPaciente(int id);
-    Task Inserir(Paciente paciente);
+    Task Inserir(PacienteInsert paciente);
     //Task UpdatePaciente(Paciente paciente);
     //Task DeletePaciente(int id);
 }

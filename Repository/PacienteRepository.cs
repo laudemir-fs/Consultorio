@@ -15,16 +15,18 @@ public class PacienteRepository : IPacienteRepository
         _dbConnection = dbConnection;
     }
 
-    public async Task InserirPaciente(Paciente paciente)
+    public async Task InserirPaciente(PacienteInsert paciente)
     {
         try
         {
-            await _dbConnection.ExecuteAsync("[InserirPaciente]", new {paciente.Nome, 
+            await _dbConnection.ExecuteAsync("[InserirPaciente]", new {
+            paciente.Nome, 
             paciente.CPF,
             paciente.DataNascimento,
             paciente.Sexo, 
             paciente.Telefone,
-            paciente.Email
+            paciente.Email,
+            paciente.PacienteID
             }, commandType: CommandType.StoredProcedure);
         }
         catch (Exception ex)
@@ -33,9 +35,9 @@ public class PacienteRepository : IPacienteRepository
         }
     }
 
-    public async Task<IEnumerable<Paciente>> ListAll()
+    public async Task<IList<Paciente>> ListAll()
     {
         var paciente =_dbConnection.Query<Paciente>("[ListarPacientes]");
-        return paciente;
+        return (IList<Paciente>)paciente;
     }
 }
