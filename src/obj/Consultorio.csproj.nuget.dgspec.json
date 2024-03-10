@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Projetos\\Consultorio\\src\\Consultorio.csproj": {}
+    "C:\\Projetos\\Consultorio\\src\\Consultorio.csproj": {}
   },
   "projects": {
-    "c:\\Projetos\\Consultorio\\src\\Consultorio.csproj": {
+    "C:\\Projetos\\Consultorio\\src\\Consultorio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Projetos\\Consultorio\\src\\Consultorio.csproj",
+        "projectUniqueName": "C:\\Projetos\\Consultorio\\src\\Consultorio.csproj",
         "projectName": "Consultorio",
-        "projectPath": "c:\\Projetos\\Consultorio\\src\\Consultorio.csproj",
+        "projectPath": "C:\\Projetos\\Consultorio\\src\\Consultorio.csproj",
         "packagesPath": "C:\\Users\\laude\\.nuget\\packages\\",
-        "outputPath": "c:\\Projetos\\Consultorio\\src\\obj\\",
+        "outputPath": "C:\\Projetos\\Consultorio\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\laude\\AppData\\Roaming\\NuGet\\NuGet.Config"

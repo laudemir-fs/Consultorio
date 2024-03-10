@@ -25,5 +25,4 @@ public class PacienteService : IPacienteService
     {
         await _pacienteRepository.InserirPaciente(paciente);
     }
-
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g+pRT8p2aDpiDWN2hDlZuTYGDH7hWnm4cQlrmOAgWpCzGUm+aD5zfBgjDD8m7ey6pPPYWotQSODrZJfjuTP9IA==",
+  "dgSpecHash": "iMelXkA27n5QASqTsazmIR5kqZFR963ka1D7sIaMhyQpMbWWVyHunGGlbYW1527PbzesRqdlCXXPsydI5zlccA==",
   "success": true,
-  "projectFilePath": "c:\\Projetos\\Consultorio\\src\\Consultorio.csproj",
+  "projectFilePath": "C:\\Projetos\\Consultorio\\src\\Consultorio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\laude\\.nuget\\packages\\dapper\\2.1.28\\dapper.2.1.28.nupkg.sha512",
     "C:\\Users\\laude\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
