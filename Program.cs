@@ -23,11 +23,13 @@ builder.Services.AddScoped<IPacienteRepository, PacienteRepository>();
 builder.Services.AddScoped<ITipoExameRepository, TipoExameRepository>();
 builder.Services.AddScoped<IExameRepository, ExameRepository>();
 builder.Services.AddScoped<IConsultaRepository, ConsultaRepository>();
+builder.Services.AddScoped<ITooltipsRepository, TooltipsRepository>();
 
 builder.Services.AddScoped<IPacienteService, PacienteService>();
 builder.Services.AddScoped<ITipoExameService, TipoExameService>();
 builder.Services.AddScoped<IExameService, ExameService>();
 builder.Services.AddScoped<IConsultaService, ConsultaService>();
+builder.Services.AddScoped<ITooltipsService, TooltipsService>();
 
 
 var app = builder.Build();

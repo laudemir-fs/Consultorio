@@ -6,6 +6,7 @@ public class PacientesController : ControllerBase
 {
     private readonly IPacienteService _pacienteService;
 
+
     public PacientesController(IPacienteService pacienteService)
     {
         _pacienteService = pacienteService;
@@ -15,8 +16,16 @@ public class PacientesController : ControllerBase
     [HttpGet]
     public ActionResult GetAllPacientes()
     {
-            var pacientes =  _pacienteService.ListAll();
-            return Ok(pacientes);
+            var result =  _pacienteService.ListAll();
+            return Ok(result);
+    }
+
+    // GET: api/Pacientes
+    [HttpGet("ExportToExcel")]
+    public async Task<IActionResult> ExportToExcel()
+    {
+       var fileBytes = await _pacienteService.ExportToExcelBytes();
+        return File(fileBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Pacientes.xlsx");
     }
 
     // POST: api/Pacientes

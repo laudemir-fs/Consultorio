@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Projetos\\Consultorio\\src\\Consultorio.csproj": {}
+    "C:\\Projetos\\Consultorio\\src\\Consultorio.csproj": {}
   },
   "projects": {
-    "c:\\Projetos\\Consultorio\\src\\Consultorio.csproj": {
+    "C:\\Projetos\\Consultorio\\src\\Consultorio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Projetos\\Consultorio\\src\\Consultorio.csproj",
+        "projectUniqueName": "C:\\Projetos\\Consultorio\\src\\Consultorio.csproj",
         "projectName": "Consultorio",
-        "projectPath": "c:\\Projetos\\Consultorio\\src\\Consultorio.csproj",
+        "projectPath": "C:\\Projetos\\Consultorio\\src\\Consultorio.csproj",
         "packagesPath": "C:\\Users\\laude\\.nuget\\packages\\",
-        "outputPath": "c:\\Projetos\\Consultorio\\src\\obj\\",
+        "outputPath": "C:\\Projetos\\Consultorio\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\laude\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -32,15 +32,28 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "ClosedXML.Extensions.WebApi": {
+              "target": "Package",
+              "version": "[0.3.0, )"
+            },
             "Dapper": {
               "target": "Package",
               "version": "[2.1.28, )"
+            },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.1.1, )"
             },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
@@ -66,6 +79,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.28, 6.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.28, 6.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.28, 6.0.28]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.28, 6.0.28]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -74,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.418\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

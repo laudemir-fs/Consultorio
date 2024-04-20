@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc;
+
 public interface IPacienteRepository
 {
     Task <IList<Paciente>> ListAll();
